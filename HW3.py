@@ -1,9 +1,9 @@
-# Name:
-# Student ID:
-# Email:
+# Name: Sahif Khan
+# Student ID: 3529 3444 
+# Email: sahifk@umich.edu
 # Who or what you worked with on this homework (including generative AI like ChatGPT):
 # If you worked with generative AI also add a statement for how you used it.
-# e.g.:
+# e.g.: No AI used
 # Asked ChatGPT hints for debugging and suggesting the general structure of the code
 # Did your use of GenAI on this assignment align with your goals and guidelines in 
 #    your Gen AI contract? If not, why?
@@ -32,8 +32,9 @@ class CouponDispenser:
         Args:
             coupon_cards (list[str]): list of possible coupons users can receive.
         """
-        # TODO: Implement per instructions
-        pass
+        self.coupon_cards = coupon_cards
+        self.customer_roster = []
+        self.issued_indices = []
 
     def __str__(self):
         """
@@ -43,8 +44,9 @@ class CouponDispenser:
         Returns:
             str
         """
-        # TODO: Implement per instructions
-        pass
+        if not self.coupon_cards:
+            return ''
+        return '|'.join(self.coupon_cards)
 
     def issue_coupon(self, name):
         """
@@ -399,5 +401,5 @@ def test():
 
 if __name__ == "__main__":
     main()
-    # test()
+    test()
 
