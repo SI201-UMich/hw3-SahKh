@@ -99,6 +99,10 @@ class CouponDispenser:
             if user_input == "exit":
                 print("Goodbye!")
                 break
+            elif user_input == "show":
+                for i, customer in enumerate(self.customer_roster):
+                    coupon_index = self.issued_indices[i]
+                    print(f"{customer}: {self.coupon_cards[coupon_index]}")
             else:
                 split_input_list = user_input.split(',')
                 for name in split_input_list:
