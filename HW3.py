@@ -128,8 +128,17 @@ class CouponDispenser:
         Returns:
             None
         """
-        # TODO: Implement per instructions
-        pass
+        if not self.issued_indices:
+            print("Empty")
+        
+        counts = [0] * len(self.coupon_cards)
+        
+        for i in self.issued_indices:
+            counts[i] += 1
+        
+        for i, coupon in enumerate(self.coupon_cards):
+            print(f"{coupon} distribution count: {counts[i]}.")
+            
 
 
 def main():
